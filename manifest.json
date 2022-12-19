@@ -1,0 +1,37 @@
+{
+    "manifest_version": 3,
+    "name": "Enhanced ChatGPT",
+    "description": "Enhanced ChatGPT extension adds new features to ChatGPT, including chat export and prompt templates. A must-have for ChatGPT users.",
+    "version": "0.15.3.4",
+    "icons": {
+        "16": "icons/16.png",
+        "24": "icons/24.png",
+        "32": "icons/32.png",
+        "48": "icons/48.png",
+        "64": "icons/64.png",
+        "72": "icons/72.png",
+        "80": "icons/80.png",
+        "96": "icons/96.png",
+        "128": "icons/128.png",
+        "256": "icons/256.png"
+    },
+    "background": {
+        "service_worker": "background.js",
+        "type": "module"
+    },
+    "action": {
+        "default_title": "Open ChatGPT"
+    },
+    "permissions": [
+        "tabs"
+      ],
+    "web_accessible_resources" : [{
+        "resources": ["/inject.js"],
+        "matches": ["<all_urls>"],
+        "use_dynamic_url": true
+    }],
+    "content_scripts": [{
+        "js": ["content_script.js"],
+        "matches": ["https://chat.openai.com/chat/*"]
+    }]
+}
