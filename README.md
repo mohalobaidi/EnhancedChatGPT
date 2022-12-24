@@ -6,6 +6,7 @@
 > to improve the user experience and welcome user suggestions.
 
 <br/>
+<img src="https://preview.redd.it/8m6pr8459h6a1.png?width=1460&format=png&auto=webp&s=cac3575355be0607d02f8149cfe88b0aa10673f2" />
 
 [![Chrome Web Store](https://img.shields.io/chrome-web-store/d/mcbhhiafbiafmggccdcpgfldcaeipopg.svg?style=for-the-badge&label=Chrome%20users&ogo=google-chrome&logoColor=white)][chrome]
 [![Chrome Web Store](https://img.shields.io/chrome-web-store/v/mcbhhiafbiafmggccdcpgfldcaeipopg.svg?style=for-the-badge&logo=google-chrome&logoColor=white)][chrome]
