@@ -39,6 +39,18 @@
     // For each mutation (change) to the document body
     mutations.forEach(mutation => {
       // If the mutation is not a change to the list of child nodes, skip it
+      if (mutation.removedNodes.length) {
+        mutation.removedNodes.forEach((node) => {
+          const exportButton = [...node.children].find(
+            (child) =>
+              child.innerText &&
+              child.innerText.toLowerCase().includes("export")
+          );
+          if (exportButton) {
+            setTimeout(addExportButton, 500);
+          }
+        });
+      }
       if (mutation.type !== 'childList')
       // If no new nodes were added, skip this mutation
       if (mutation.addedNodes.length == 0) return
@@ -149,7 +161,7 @@ function addExportButton () {
   }
   
   // Get the "Dark Mode" and "Light Mode" button as a reference point
-  const colorModeButton = [...nav.children].find(child => child.innerText.includes('Mode'))
+  const colorModeButton = [...nav.children].find(child => child.innerText.toLowerCase().includes('mode'))
   // Insert the "Export Button" before the "Color Mode" button
   nav.insertBefore(button, colorModeButton)
 }
